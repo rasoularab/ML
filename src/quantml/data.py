@@ -2,7 +2,7 @@
 from __future__ import annotations
 from pathlib import Path 
 import pandas as pd
-
+import numpy as np
 
   # add at the top of the file with the other imports
 

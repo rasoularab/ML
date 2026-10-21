@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # quantml-starter
 
 A fixed project layout for the 10-week ML-for-quant-finance plan. You write the logic; the stubs give the signatures, the conventions and the tests that define "done".
@@ -43,3 +44,7 @@ experiments/        throwaway scripts and the trial log (experiments/log.jsonl)
 notes/              your weekly notes and derivations (markdown)
 docs/               CONVENTIONS.md and WEEKLY_BUILD_MAP.md
 ```
+=======
+# ML
+Machine learning for quantitative finance — feature engineering, model implementation, and backtesting on financial data.
+>>>>>>> 6691d370bfcc07d5aef6a9a9aca9abe4cba0ccd7

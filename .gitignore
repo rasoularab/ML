@@ -1,8 +1,39 @@
+# --- Python ---
 .venv/
+venv/
 __pycache__/
 *.pyc
-.ipynb_checkpoints/
+*.egg-info/
+build/
+dist/
 .pytest_cache/
-data/
+.coverage
+htmlcov/
+
+# --- Notebooks ---
+.ipynb_checkpoints/
+
+# --- Data (never commit market data you don't have a license to share) ---
+data/*
+!data/.gitkeep
 *.parquet
+*.csv
+*.h5
+*.pkl
+
+# --- Experiment outputs ---
+experiments/*.png
+mlruns/
+*.log
+
+# --- Secrets ---
+.env
+*.key
+secrets*.yaml
+
+# --- IDE / OS ---
+.vscode/
+.idea/
 .DS_Store
+Thumbs.db
+desktop.ini
