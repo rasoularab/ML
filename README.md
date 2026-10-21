@@ -43,3 +43,7 @@ experiments/        throwaway scripts and the trial log (experiments/log.jsonl)
 notes/              your weekly notes and derivations (markdown)
 docs/               CONVENTIONS.md and WEEKLY_BUILD_MAP.md
 ```
+
+# ML
+Machine learning for quantitative finance — feature engineering, model implementation, and backtesting on financial data.
+
