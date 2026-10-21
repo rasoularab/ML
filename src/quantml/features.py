@@ -15,11 +15,16 @@ def rolling_volatility(returns: pd.Series, window: int) -> pd.Series:
 
 def lagged_returns(returns: pd.Series, lags) -> pd.DataFrame:
     """Lagged-return features. Column `lag_k` at row t equals r_{t-k}; every k must be >= 1.
-
-    TODO (Week 1, Thursday).
-    Done when tests/test_features.py passes.
     """
-    raise NotImplementedError
+    if not all(k >= 1 for k in lags):
+        raise ValueError("all lags must be >= 1")
+
+        # 2) build one column per lag
+    cols = {f"lag_{k}": returns.shift(k) for k in lags}
+
+    # 3) wrap it in a DataFrame
+    return pd.DataFrame(cols, index=returns.index)
+    
 
 
 def cross_sectional_rank(df: pd.DataFrame) -> pd.DataFrame:
