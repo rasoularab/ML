@@ -1,0 +1,26 @@
+# One YAML per experiment. pipeline.run_experiment(cfg) reads this.
+project: 1a_shrinkage
+data:
+  tickers: [SPY, QQQ, IWM, EFA, EEM, TLT, IEF, LQD, HYG, GLD]
+  start: "2010-01-01"
+  end: "2025-12-31"
+target:
+  horizon: 1                 # days; y_t = r_t (h = 1)
+features:
+  lags: [1, 2, 3, 5, 10, 21] # all >= 1: row t uses data up to t-1
+  vol_window: 21
+cv:
+  scheme: walk_forward       # walk_forward | purged_kfold
+  train_size: 756            # trading days
+  test_size: 63
+  step: 63
+  embargo_pct: 0.01
+models:
+  - name: zero
+  - name: ols
+  - name: ridge
+    alpha: [0.1, 1.0, 10.0]
+evaluation:
+  r2_benchmark: zero         # zero | prevailing_mean
+  cost_bps: 5
+log_path: experiments/log.jsonl

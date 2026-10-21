@@ -1,0 +1,15 @@
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+pyyaml
+pytest
+yfinance
+ipykernel
+tabulate
+# added in later weeks:
+# lightgbm   (Week 3)
+# shap       (Week 4)
+# hmmlearn   (Week 5)
+# torch      (Week 6)
